@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+    <p> Register here </p>
+    <div id="registration form">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <!-- Team Registration Form -->
+            {% csrf_token %}
+            <table class="register">
+               <!-- {% for row in form %}
+                    <tr> <td> {{row}} </td> <td> {{row}} </td> </tr>
+                {% endfor %}-->
+                {{form.as_table}}
+            </table>
+            <!-- Register Button -->
+            <input type="submit" value="Register"/>
+        </form>
+    </div>
+    <br><br>
+    
+{% endblock %}

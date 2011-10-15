@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="errors">
+ <h1>
+  Page Not Found
+ </h1>
+ <p>
+  The url:
+  <u>
+   {{request.path}}
+  </u>
+  does not exist. If you have found
+    this error while being directed from one of our links, please inform
+    the WebOps team at: webops [at] shaastra.org.
+ </p>
+ <p>
+  We apologise for the inconvinence
+ </p>
+</div>
+{% endblock %}

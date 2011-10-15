@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <p>Team details for {{team.display_name}}</p>
+    <table border="1">
+        <tr>
+        <th>Team</th>
+        <th>Participants</th>
+        <th>Organisation</th>
+        </tr>
+            <tr>
+            <td>{{team.display_name}}</td>
+            <td>
+                {{team.name1}}
+                {%if team.name2%} <br/> {{team.name2}}{% endif %}
+                {%if team.name3%} <br/> {{team.name3}}{% endif %}
+            </td>
+            <td>{{team.organisation}}</td>
+            </tr>
+    </table>
+{% endblock %}

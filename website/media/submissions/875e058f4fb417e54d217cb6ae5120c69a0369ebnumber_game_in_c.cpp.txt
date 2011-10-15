@@ -1,0 +1,43 @@
+    #include<iostream.h>
+    #include<stdlib.h> //RANDOM NUMBER GENERATOR
+    #include <ctime>
+    int main()
+    {
+    int random; //RANDOM NUMBER TO BE GUESSED
+    int usersGuess;
+     
+    char reply = 'y';
+    const int LIMIT=10; // MAX RANDOM NUMBER
+    cout << "Welcome to the game\n\n"
+    << "I will generate a number between 1 and 10\n\n"
+    << "and you have 3 chances to guess it\n\n";
+     
+    srand((unsigned)time(0));
+     
+    int lowest=1, highest=10; //RANDOM NUMBER RANGE
+    int range=(highest-lowest)+1;
+    random = lowest+int(range*rand()/(RAND_MAX + 1.0));
+     
+    cout <<"Guess a number between 0 and "
+    <<LIMIT << "\n";
+    cout << "Input guess : ";
+    cin >> usersGuess;
+    int attempts = 1;
+    while (attempts <3)
+    {
+    if (usersGuess > random || usersGuess < random)
+    {
+    cout << "GUESS AGAIN\n";
+    cout << "Input guess : ";
+    cin >> usersGuess;
+    attempts++;
+    }
+    else
+    {
+    attempts = 3;
+    cout << "YOU WON\n";
+    }
+    }
+     
+    return(0);
+    }

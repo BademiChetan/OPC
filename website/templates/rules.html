@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div style="text-align:justify; width:700px;">  
+<div id="">
+<h1>Rules</h1>
+<ol>
+  <li>Contest is open to <strong>all</strong>. Teams comprising of students from different institutes allowed.</li>
+  <li>Maximum of <strong>3 members</strong> in a team are allowed. One person can't be part of more than one team.</li>
+
+  <li>Languages allowed: <strong>C/C++/Java</strong>.</li>
+  <li><strong>Java solutions should be in a Main class</strong>.</li>
+  <li>The constraints on time, memory, etc. shall be specified separately for each problem.</li>
+  <li><strong>Time limit for Java solutions is 1.5 times the given time limit (since it is usually slower than C/C++).</strong>.</li>
+  <li>For all the problems, unless otherwise specified, the input should be read from <strong>stdin</strong> and the output should be written to <strong>stdout</strong>.</li>
+  <li>Maximum of <strong>50 submissions</strong> will be allowed for a problem.</li>
+  <li>No system calls will be allowed, other than reading from <strong>stdin</strong> and  writing to <strong>stdout</strong>.</li>
+  <li>Compilation will be done on gcc/g++ (version 4.4) and gcj (version 4.6). We advise you to write compiler version independent code.</li>
+  <li>Any sort of malicious activity will lead to immediate disqualification of the team in question.</li>
+  <li>Admins have the authority to suspend/disqualify any team at any stage of the contest, if they suspect any malpractices/plagiarism.</li>
+
+  <li>Ranks are decided based on the total number of points. If the number of points is the same, penalty time is used to decide the rank.</li>  
+  <li>Penalty time for a team is equal to the sum of its penalty times for each of its problems. Penalty time of a problem is equal to the amount of time into the contest when the team correctly solved the problem for the first time plus a <strong>20 minute penalty for each incorrect attempt</strong> prior to it. Compile errors to not count as incorrect attempts. </li>  
+  <li>In case of a tie, ranks will be based on the time of the last correct submission. If a tie still remains, we will break it on the basis of total number of submissions.</li>
+</ol>
+</div>
+</div>
+{% endblock %}

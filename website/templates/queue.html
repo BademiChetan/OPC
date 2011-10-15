@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+
+{% block content %} 
+{% if not SUPERUSER and not VISIBLE %}
+    <p> There is no contest going on </p>
+{% else %}
+    <h3>Queue Status:</h3>
+    <style> .row_a{ background-color:#eee; } .row_accepted{ background-color:#A3D175; color:#000; } .row_wans{ background-color: #cc3300; color:#fff;}</style>
+    <table border="1">
+        <tr>
+        <th style="width:50px;">Id</th>
+        <th style="width:100px;">Timestamp</th>
+        <th style="width:150px;">Team</th>
+        <th style="width:200px;">Problem</th>
+        <th style="width:150px;">Status</th>
+        <th style="width:150px;">Language</th>
+        </tr>
+        {% for row in subs %}
+            <tr class = "{% cycle 'row_a' 'row_b' %}">
+            <td>{{row.id}}</td>
+            <td>{{row.timestamp|date:"r"}}</td>
+            <td>{{row.team.display_name}}</td>
+            <td>{{row.problem}}</td>
+            {% if row.status == "Compile Error" %}
+                {% if request.user == row.team.user or SUPERUSER %}
+                <td style="background-color:rgb(153,0,0); color:#fff;"><a style="color:#fff; text-decoration:underline;" href = "{{SITE_URL}}compileoutput/{{row.id}}/"> {{row.status}}</a></td>
+                {% else %}
+                <td style="background-color:rgb(153,0,0); color:#fff;">{{row.status}}</td>
+                {% endif %}
+            {% else %}
+
+		{% if row.status == "Accepted" or row.status == "Already Accepted"%}
+           	 <td class="row_accepted">{{row.status}}</td>
+		{% else %}
+           	 <td class="row_wans">{{row.status}}</td>
+		{% endif %}
+
+            {% endif %}
+            <td>{{row.language_id}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div id = "links">
+    <center style="width:800px;">
+    <br/>
+    <a href="{{SITE_URL}}queue/1/">First</a> &nbsp;
+    {% if Prev > 0 %} 
+        <a href="{{SITE_URL}}queue/1/">Previous</a>&nbsp;
+    {% endif %}
+    {% for page in pages %}
+        <a href="{{SITE_URL}}queue/{{page}}/">{{page}}</a>
+    {% endfor %}
+    {% if not totalPages > Next %}
+        <a href="{{SITE_URL}}queue/{{totalPages}}/">Next</a>&nbsp;
+    {% endif %}
+    <a href="{{SITE_URL}}queue/{{totalPages}}/">Last</a>&nbsp;
+    <br/>
+    </center></div>
+{% endif %}
+
+{% endblock %}

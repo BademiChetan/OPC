@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t,n,tmp,a,s;
+    cin>>t;
+    for(int i=0;i<n;i++)
+    {
+            cin>>n;
+            a=0;
+           s=0;
+           // int a[n];
+            for(int j=0;j<n;j++)
+            {
+                  cin>>tmp;
+                  a=a+tmp;
+                  s=s+j;
+            }
+            a=a-s;
+            if(a%2==0)
+            cout<<"LOSE"<<endl;
+            else
+            cout<<"WIN"<<endl;
+                    
+    }
+    return 0;
+}

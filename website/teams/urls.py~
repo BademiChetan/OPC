@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+from django.conf.urls.defaults import *
+from django.contrib import admin
+admin.autodiscover()
+
+handler404 = "main_test.misc.util.not_found"
+handler500 = "main_test.misc.util.server_error"
+
+
+urlpatterns = patterns('',          
+      (r'^register/$', 'website.teams.views.register'),
+      (r'^home/$', 'website.teams.views.home'),
+      (r'^teams/$', 'website.teams.views.teams'),
+      (r'^teams/$', 'website.teams.views.login'),
+      (r'^logout/$', 'website.teams.views.logout'),
+      (r'^team_info/(?P<team_name>.*)/$', 'website.teams.views.show_details'),
+)   
+
+
+

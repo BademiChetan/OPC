@@ -1,0 +1,65 @@
+#include<iostream.h>
+#include<stdio.h>
+#define n = 1000;
+
+int check(int x,int y);
+
+void main()
+{
+int board[n][n];
+int colour[n];
+int t,x,y,i,j,k;
+int c[];
+
+	clrscr();
+	cin>>t;
+
+while(t>0)
+{
+	cin>>x>>y;
+	a[x][y]=check(x,y);
+	cout<<a[x][y]<<endl;
+}
+
+	getch();
+
+}
+
+int check(int a,int b)
+{
+	for(j=n;j>0;j--)
+	{
+		for(i=0;i<n;i++)
+		{
+			if(a[x][i] != NULL)
+			{
+				if(a[x][i] == colour[j])
+				{
+					continue;
+				}
+				else
+				{
+					k=0;
+					c[k]=colour[j];
+					k++;
+				}
+			}
+			else
+				continue;
+		}		
+	}
+	k=0;
+	while(c[k]!= NULL)
+	{
+		for(l=0;l<n;l++)
+		{
+			if(a[l][y]==c[k])
+			{
+				k++;
+				continue;
+			}
+			else
+				return c[k];
+		}		
+	}
+}

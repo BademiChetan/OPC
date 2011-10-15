@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int T;
+    cin>>T;
+    unsigned long int days[1005], divi[1005];
+    for (int calc = 0; calc < T; calc++)
+    {
+        cin>>days[calc]>>divi[calc];
+    }
+    for (calc = 0; calc < T; calc++)
+    {
+        unsigned long int sqr = 2;
+        for (int n =0; n<days[calc];n++)
+        {
+            sqr = sqr *sqr;
+        }
+        unsigned long int result = sqr%divi[calc];
+        cout << result<< "\n";
+    }
+    return 0;
+}
+        
+        

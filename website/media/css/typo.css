@@ -1,0 +1,96 @@
+/*
+   Deal only with Typography here.
+   
+   Vimal
+   05 Sun, Aug 2007 @ 14:03
+*/
+body,ul,ol,dl,h1,h2,h3,h4,h5,h6,td,th,
+caption,p,blockquote,input,textarea {
+    font-size: 13px/1.5em;
+    font-family: Verdana, sans-serif;
+    line-height: 18px;
+}
+
+pre {
+  font-family: Monospace;
+  line-height: 100%;
+  font-size: 120%;
+  background: #DBE3E4;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Verdana, sans-serif;
+    line-height: 100%;
+}
+
+#tabs {
+    font-weight: bold;
+    font-size: 93%;
+    line-height: normal;
+}
+
+#section-content h1 { 
+    font-size: 28px; 
+    margin: 0 0 15px 0;
+}
+
+h2 { 
+    font-size: 22px; 
+    margin-bottom: 5px;
+}
+
+h3 { 
+    font-size: 16px; 
+    padding-bottom: 2px;
+    border-bottom: 1px solid #ccc;
+}
+
+h4 { font-size: 14px; }
+h5 { font-size: 12px; font-weight:bold; }
+h6 { font-size: 10px; font-weight:bold; }
+
+p { 
+    font-size: 14px;
+    margin: 0 0 18px 0; 
+    text-align:justify; 
+}
+
+p.last {
+    margin-bottom:0; 
+}
+
+div#breadcrumbs {
+    padding: 5px;
+    /* border-bottom: 2px solid #CCC; */
+    margin-bottom: 5px;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 2.0em;
+    padding-left: 120px;
+    font-weight: normal;
+}
+
+#header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    padding-left: 120px;
+    font-weight: normal;
+}
+
+body a {
+    color: #382C1E;
+    text-decoration: none;
+    border-bottom: 1px dotted #ccc;
+}
+
+body a:hover {
+    /* color: white; */
+}
+
+#footer a {
+    color: white;
+}

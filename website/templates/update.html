@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <h3> Update team profile </h3>
+    <div id="registration form">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <!-- Team Registration Form -->
+            {% csrf_token %}
+            <table class="register">
+                {{form.as_table}}
+            </table>
+            <input class="button" type="submit" value="Update"/>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+/*
+   CSS for S(A/O)PC
+   Vimal
+   05 Sun, Aug 2007 @ 14:05
+*/
+
+#header {
+    background: #382C1E url('/images/brown.gif') no-repeat 10px center;
+    color: #fff;
+    margin: 0;
+    padding: 1.4em 0;
+}
+
+.inner-wrap {
+    width: 760px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.text-content {
+    background: white;
+    padding: 10px;
+    border-bottom: 2px solid  #382C1E;
+    border-right: 2px solid  #382C1E;
+    border-left: 1px solid  #382C1E;
+    border-top: 1px solid  #382C1E;
+}
+
+#section-content {
+    background: #CDCCB2;
+    padding: 2em 0 2em 0;
+    float: left;
+    clear: left;
+    width: 100%;
+    line-height: 1.5em;
+}
+
+#footer {
+    padding: 5px 0 8px 0;
+    float: left;
+    clear: left;
+    width: 100%;
+    background: #65533C;
+    border-top: 2px solid  #382C1E;
+    color: #ccc;
+}
+

@@ -1,0 +1,2 @@
+-1073741824
+1000_4: 1000_4.cpp:83: int main(): Assertion `0 > 1' failed.

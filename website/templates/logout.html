@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block content%}
+
+<h3>You Have Successfully Logged Out!</h3>
+
+<div id="login">
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input class="button" type="submit" value="Login">
+    </form>
+</div>
+
+{%endblock%}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+Online Programming Contest, Shaastra 2011
+{% endblock %}
+
+{% block content %}
+{% if not VISIBLE and not SUPERUSER %}
+        <p>There is no contest running at the moment.</p>
+
+{% else %}
+    <h3>Below is the list of problems.</h3>
+    <style> .row_a{ background-color:#eee; } </style>
+    <table border="1">
+        <tr>
+        <th style="width:100px;">No.</th>
+        <th style="width:300px;">Problem Name</th>
+        <th style="width:50px;">AC</th>
+        <th style="width:50px;">WA</th>
+        <th style="width:50px;">TLE</th>
+        <th style="width:50px;">RE</th>
+        <th style="width:50px;">Total</th>
+        </tr>
+        {% for row in problems %}
+            <tr class = "{% cycle 'row_a' 'row_b' %}">
+            <td>{{forloop.counter}}</td>
+            <td><a href ="{{SITE_URL}}problems/{{forloop.counter}}">{{row.name}}</a> </td>
+            <td>{{row.ac}}</td>
+            <td>{{row.wa}}</td>
+            <td>{{row.tle}}</td>
+            <td>{{row.re}}</td>
+            <td>{{row.ac|add:row.wa|add:row.tle|add:row.re}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{%endif%}
+
+{% endblock %}

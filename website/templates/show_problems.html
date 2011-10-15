@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% if not VISIBLE and not SUPERUSER %}
+No contest running! Come back sometime later!
+{% else %}
+{{problem.name}}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if not VISIBLE and not SUPERUSER %}
+        <p>There is no contest running at the moment.</p>
+
+{% else %}
+    <h3 style="text-align:justify; width:700px;">Problem Statement</h3>
+    <div style="text-align:justify; width:700px;">{{problem.description|safe}}</div><br/>
+    <h3 style="text-align:justify; width:700px;">Input Format</h3>
+	<div style="text-align:justify; width:700px;">{{problem.input_format|safe}}</div><br/>
+    <h3 style="text-align:justify; width:700px;">Output Format</h3>
+	<div style="text-align:justify; width:700px;">{{problem.output_format|safe}}</div><br/>
+    <h3 style="text-align:justify; width:700px;">Constraints</h3>
+	<div style="text-align:left; width:700px;">{{problem.constraints|safe}}</div><br/>
+
+    <h3 style="text-align:justify; width:700px;">Sample Input</h3>
+	<div style="text-align:left; width:700px;">{{problem.sample_input|safe}}</div><br/>
+    <h3 style="text-align:justify; width:700px;">Sample Output</h3>
+	<div style="text-align:left; width:700px;">{{problem.sample_output|safe}}</div><br/>
+    <h3 style="text-align:justify; width:700px;">Time Limit</h3>
+	
+    <div style="text-align:left; width:700px;">{{problem.time_limit|safe}} second(s)</div><br/>
+    <h3 style="text-align:justify; width:700px;">Memory Limit</h3>
+	<div style="text-align:left; width:700px;">{{problem.memory_limit|safe}} MB</div><br/>
+    <h3 style="text-align:justify; width:700px;">Points</h3>
+	<div style="text-align:left; width:700px;">{{problem.points|safe}} </div><br/>
+    <br/><br/>
+{% endif %}
+{% endblock %}

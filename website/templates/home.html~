@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <p>Welcome to Online Programming Contest, Shaastra 2011. </p>
+    <img src="{{ MEDIA_URL }}topcoder.gif" alt ="" title="TopCoder -- Just checking if media files are getting served properly."/>
+{% endblock %}

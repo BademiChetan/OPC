@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+    <h3> This is the list of teams that have already registered for OPC, Shaastra 2011.</h3>
+    <table>
+        <tr>
+        <th style="width:50px;">Sl No</th>
+        <th style="width:200px;">Team</th>
+        <th style="width:300px;">Participants</th>
+        <th style="width:250px;">Organisation</th>
+        </tr>
+        {% for row in teams %}
+            
+            <tr class = "{% cycle 'row-a' 'row-b' %}"  >
+            <td>{{forloop.counter}}</td>
+            <td>{{row.display_name}}</td>
+            <td>
+                {{row.name1}}
+                {%if row.name2%} <br/> {{row.name2}}{% endif %}
+                {%if row.name3%} <br/> {{row.name3}}{% endif %}
+            </td>
+            <td>{{row.organisation}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

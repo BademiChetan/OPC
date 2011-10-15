@@ -1,0 +1,104 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>
+            {% block title %}
+            Online Programming Contest, Shaastra 2011 
+            {% endblock %}
+        </title>
+<!--         <link rel="stylesheet" type="text/css" href= "{{MEDIA_URL}}css/form.css"> -->
+        <link rel="stylesheet" type="text/css" href= "{{MEDIA_URL}}css/PixelGreen2.css">
+<!--         <link rel="stylesheet" type="text/css" href= "{{MEDIA_URL}}css/style.css"> -->
+<!--         <link rel="stylesheet" type="text/css" href= "{{MEDIA_URL}}css/text.css"> -->
+<!--         <link rel="stylesheet" type="text/css" href= "{{MEDIA_URL}}css/typo.css"> -->
+        
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header">
+                <div id="header-content">    
+                    <div id="sha">
+                    </div>
+                    <h1 id="logo">Shaastra 2011</span></a></h1>
+                    <h2 id="slogan"><a href="/">Online Programming Contest</a></h2>
+                    <div id="spons">
+                        Sponsored by: 
+                        <a href="http://www.google.co.in/corporate/index.html" target="_blank">
+                        <img src="http://www.shaastra.org/includes/2008/spons/small/google.jpg" alt="Google" id="spons-img">
+                        </a>
+                    </div>
+                    <div id="menu">
+                        <li><a href = "/home/"> Home </a></li>
+                        <li><a href = "/rules/"> Rules </a></li>
+                        <li><a href = "/faqs/"> FAQs </a></li>
+                        <li><a href = "/contact/"> Contact </a></li>
+                        {% if not user.is_authenticated %} 
+                            <li><a href = "/register/"> Register </a></li>
+                        {% endif %}
+                        <li><a href = "/teams/"> Teams </a></li>
+                        {% if user.is_authenticated and user.is_active%}  
+                            <li><a href = "/logout/"> Logout </a></li>
+                        {% else %}
+                            <li><a href = "/login/"> Login </a></li>
+                        {% endif %}
+                    
+                </div>
+            </div>
+            
+            <div id="content-wrap">
+                <div id="content">
+                <!--
+                    <div id="sidebar" > 
+                    <div class="sidebox">
+                    <ul class="sidemenu">
+                    {% if user.is_authenticated and user.is_active%}  
+                        <li><a href="/logout/" class="top">Logout</a></li>
+                        <li><a href="/editprofile/">Edit Profile</a></li>
+                    {% else %}
+                        <li><a href = "/login/"> Login </a></li>
+                    {% endif %}
+                    </ul>
+                    </div>
+                    <div class="sidebox">
+                        <h1>Contest</h1>
+                    </div>
+                    <p>Send queries to <strong>opc<br>[AT]shaastra.org</strong></p>
+                    -->
+                </div>      
+            </div>  
+
+
+
+
+            
+            
+            
+            
+            
+            <!-- Top Menu 
+            {% block menu %}
+            <center>
+                <a href = "/home/"> Home </a> &nbsp;&nbsp; &nbsp;
+                {% if not user.is_authenticated %} 
+                <a href = "/register/"> Register </a> &nbsp;&nbsp; &nbsp;
+                {% endif %}
+                <a href = "/teams/"> Teams </a> &nbsp;&nbsp; &nbsp;
+                <a href = "/problems/"> Problems </a> &nbsp;&nbsp; &nbsp; 
+                <a href = "/submit/"> Submit </a> &nbsp;&nbsp; &nbsp;
+                <a href = "/queue/"> Queue </a> &nbsp;&nbsp; &nbsp;
+                {% if user.is_authenticated and user.is_active%}  
+                <a href = "/logout/"> Logout </a> &nbsp;&nbsp; &nbsp;
+                {% else %}
+                <a href = "/login/"> Login </a> &nbsp;&nbsp; &nbsp;
+                {% endif %}
+            </center>
+            {% endblock %} -->
+            <!-- Content --> 
+            <center>
+            {% block content %}
+            
+            {% endblock %}
+            </center>
+        </div>
+    </body>
+</html>

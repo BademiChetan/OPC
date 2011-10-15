@@ -1,0 +1,118 @@
+#include<stdio.h>
+#define T 10000
+
+main()
+{
+long int clr[1000][2];
+int i=0,j,t,x,y;
+scanf("%d",&t);
+if(t>=1&&t<=10000)
+{
+while(i<t)
+{
+  scanf("%d",&clr[i][0]);
+  if(clr[i][0]>=0)
+  scanf("%d",&clr[i][1]);
+  else
+  break;
+  if(clr[i][1]<=1000000)
+  i++;
+  else
+  break;
+}
+if(i==t)
+{
+for(i=0;i<t;i++)
+{
+  if(clr[i][0]==clr[i][1])
+   printf("%d\n",0);
+  else
+  {
+     if(clr[i][0]>clr[i][1])
+     {
+       if(clr[i][0]%2==0&&clr[i][1]%2==0)
+       {
+	 x=clr[i][0];
+	 y=clr[i][1];
+	 if((x/2)%2==0&&(y!=x))
+	 printf("%d\n",(x+y));
+	 else
+	 printf("%d\n",(x-y));
+
+       }
+       if(clr[i][0]%2==1&&clr[i][1]%2==0)
+       {
+	 x=clr[i][0]-1;
+	 y=clr[i][1];
+	 if((x/2)%2==0&&(y!=x))
+	 printf("%d\n",(x+y)+1);
+	 else
+	 printf("%d\n",(x-y)+1);
+
+       }
+       if(clr[i][0]%2==0&&clr[i][1]%2==1)
+       {
+	 x=clr[i][0];
+	 y=clr[i][1]-1;
+	 if((x/2)%2==0&&(y!=x))
+	 printf("%d\n",(x+y)+1);
+	 else
+	 printf("%d\n",(x-y)+1);
+       }
+       if(clr[i][0]%2==1&&clr[i][1]%2==1)
+       {
+	 x=clr[i][0]-1;
+	 y=clr[i][1]-1;
+	 if((x/2)%2==0&&(y!=x))
+	 printf("%d\n",x+y);
+	 else
+	 printf("%d\n",x-y);
+       }
+     }
+     else
+     {
+       if(clr[i][0]%2==0&&clr[i][1]%2==0)
+       {
+	 x=clr[i][0];
+	 y=clr[i][1];
+	 if((y/2)%2==0&&(y!=x))
+	 printf("%d\n",(x+y));
+	 else
+	 printf("%d\n",(y-x));
+
+       }
+       if(clr[i][0]%2==1&&clr[i][1]%2==0)
+       {
+	 x=clr[i][0]-1;
+	 y=clr[i][1];
+	 if((y/2)%2==0&&(y!=x))
+	 printf("%d\n",(x+y)+1);
+	 else
+	 printf("%d\n",(y-x)+1);
+
+       }
+       if(clr[i][0]%2==0&&clr[i][1]%2==1)
+       {
+	 x=clr[i][0];
+	 y=clr[i][1]-1;
+	 if((y/2)%2==0&&(y!=x))
+	 printf("%d\n",(x+y)+1);
+	 else
+	 printf("%d\n",(y-x)+1);
+       }
+       if(clr[i][0]%2==1&&clr[i][1]%2==1)
+       {
+	 x=clr[i][0]-1;
+	 y=clr[i][1]-1;
+	 if((y/2)%2==0&&(y!=x))
+	 printf("%d\n",x+y);
+	 else
+	 printf("%d\n",y-x);
+       }
+     }
+   }
+ }
+}
+}
+getch();
+}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>The contest is over! Hope you had a good time!</h2>
+<!-- 
+{% if not VISIBLE and not SUPERUSER %}
+-->
+<p>There is no contest running at the moment.</p>
+
+<!--
+{% else %}
+    <style type="text/css">
+	th{ width:200px; }
+    </style>
+    <h3>Submit problem here.</h3>
+    <div id="submission_form">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table border ="1">
+                {{ form.as_table }}
+            </table>
+            <input class="button" type="submit" value="Submit"/>
+        </form>
+    </div>
+{%endif%}
+-->
+{% endblock %}

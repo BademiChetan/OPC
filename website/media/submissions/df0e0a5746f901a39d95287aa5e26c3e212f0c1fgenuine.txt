@@ -1,0 +1,42 @@
+make ur xp genuine using this!!
+
+How to validate your non original Windows XP
+Follow the instructions carefully:
+
+INSTRUCTIONS HOW TO VALIDATE YOUR NON ORIGINAL WINDOWS XP:
+
+1- Click in start and then in run
+
+2- Type in regedit and then ok
+
+3- In the regedit, go to this following key:
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\WPAEvents
+
+4- On the right panel, double click in OOBETimer
+
+5- In the opened window delete all values and click OK. Shut the regedit
+
+6- Go again in start > run and this time type:
+
+%systemroot%\system32\oobe\msoobe.exe /a
+
+7- In the window that oppened, choose the option... YES I WISH TO MAKE A PHONE CALL... ( or something similar to this sentence )
+
+8- In the next step, click in the button that says CHANGE PRODUCT KEY ( or something similar )
+
+9- In the next step, type a CD-Key:
+
+THMPV-77D6F-94376-8HGKG-VRDRQ or JG28K-H9Q7X-BH6W4-3PDCQ-6XBFJ and click to update
+
+10- After clicking in the update button, the assistant to activation will return one page, then click in " remember me later ", and restart Windows again.
+
+11- Restart Windows, go again in start > run and type:
+
+%systemroot%\system32\oobe\msoobe.exe /a
+
+12- The following message will appear:
+
+Windows activation
+
+Windows is now activated

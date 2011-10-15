@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Add Problem {% endblock %}
+
+{% block content%}
+
+
+{% for error in errors %}
+    <li > {{error}} </li>
+{% endfor %}
+
+<div id="add_problem">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Add Problem">
+    </form>
+</div>
+{% endblock %}
+
+

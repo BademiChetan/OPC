@@ -1,0 +1,4 @@
+OPC Online Judge for Shaastra!
+Use clear_and_remove.py to begin the contest.
+While adding a language, make sure you put it in settings.py also. 
+Input and output files and sandboxes should be in hangman!

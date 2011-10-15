@@ -1,0 +1,62 @@
+/* A basic CSS for accessible forms 
+   
+   Vimal
+*/
+form fieldset {
+    margin-bottom: 10px;
+}
+
+form .text {
+    border: 1px solid #65533C;
+    border-bottom: 2px solid #65533C;
+    border-right: 2px solid #65533C;
+}
+
+form input {
+    padding: 3px;
+}
+
+form legend {
+    padding: 0 5px;
+}
+
+form label  {
+    display: inline-block;
+    display: -moz-inline-block;
+    font-size: 12px;
+    line-height: 1.8;
+    vertical-align: top;
+    width: 300px;
+}
+
+form fieldset ol {
+    margin: 0; 
+    padding: 0;
+}
+
+form fieldset li {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+
+form .errortext {
+    font-weight: bold;
+    color: black;
+}
+
+span.req {
+  font-color: red;
+  font-weight: bold;
+}
+
+form .error {
+    /* Yoo hoo, tried many colours :) */
+    /*
+       background: #F09A24;
+       background: #E67700;
+       background: #E69D00;
+       background: #E6CB00;
+    */
+    background: #F79000;
+}

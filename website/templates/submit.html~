@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Submit a Solution
+{% endblock %}
+
+
+
+{% block content %}
+    <p>Submit problem here.</p>
+    <div id="submission form">
+    <form action="" method="POST" enctype="multipart/form-data">
+        <!-- Submission Form -->
+        {% csrf_token %}
+        <table border ="1">
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
+{% endblock %}

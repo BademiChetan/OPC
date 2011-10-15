@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block content %} 
+{% if not SUPERUSER and not VISIBLE %}
+    <p> There is no contest going on </p>
+{% else %}
+    <h3>Ranklist</h3>
+    <style> .row_a{ background-color:#eee; } </style>
+    <table border="1">
+        <tr>
+        <th style="width:100px;">Rank</th>
+        <th style="width:200px;">Team</th>
+        <th style="width:150px;">Points</th>
+        <th style="width:200px;">Penalty Time</th>
+        </tr>
+        {% for row in rankings %}
+            <tr class = "{% cycle 'row_a' 'row_b' %}">
+            <td>{{forloop.counter}}</td>
+            <td>{{row.team_id}}</td>
+            <td>{{row.points}}</td>
+            <td>{{row.penalty}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+{% endblock %}

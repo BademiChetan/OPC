@@ -1,0 +1,100 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+    	<link rel = "icon" type="image/x-icon" href="{{MEDIA_URL}}images/favicon.ico">
+	<!-- <script language="JavaScript">
+		TargetDate = "09/25/2011 02:30 PM";
+		BackColor = "";
+		ForeColor = "white";
+		CountActive = true;
+		CountStepper = -1;
+		LeadingZero = true;
+		DisplayFormat = " %%H%% Hours, %%M%% Minutes, %%S%% Seconds to go for the start of the contest!";
+		FinishMessage = "It is finally here!";
+	</script>
+    -->
+        <title>
+            {% block title %}
+            Online Programming Contest, Shaastra 2011
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" type="text/css" href= "{{MEDIA_URL}}css/PixelGreen2.css">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-25671151-1']);
+              _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                              })();
+
+                              </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header">
+                <div id="header-content">    
+                    <div id="sha">
+                    </div>
+                    <h1 id="logo">Shaastra 2011</span></a></h1>
+                    <h2 id="slogan"><a href="/">Online Programming Contest</a></h2>
+                    <div id="spons">
+                        Sponsored by: 
+                        <a href="http://www.google.co.in/corporate/index.html" target="_blank">
+                        <img src="http://www.shaastra.org/includes/2008/spons/small/google.jpg" alt="Google" id="spons-img">
+                        </a>
+                    </div>
+                    <div id="menu">
+                        <li><a href = "{{SITE_URL}}home/"  id="mhome"> Home </a></li>
+                        <li><a href = "{{SITE_URL}}rules/"  id="mrules"> Rules </a></li>
+                        <li><a href = "{{SITE_URL}}faq/" id="mfaq"> FAQs </a></li>
+                        <li><a href = "{{SITE_URL}}contact/"  id="mcontact"> Contact </a></li>
+                        
+                        {% if not user.is_authenticated %} 
+                            <li><a href = "{{SITE_URL}}register/"  id="mreg"> Register </a></li>
+                        {% endif %}
+                        <li><a href = "{{SITE_URL}}teams/"  id="mteam"> Teams </a></li>
+                        {% if VISIBLE or SUPERUSER %}
+                        <li><a href = "{{SITE_URL}}problems/"  id="mproblems"> Problems </a></li>
+                        <li><a href = "{{SITE_URL}}submit"  id="msubmit">Submit</a></li>
+                        <li><a href = "{{SITE_URL}}queue/1/"  id="mqueue">Queue</a></li>
+                        <li><a href = "{{SITE_URL}}ranklist"  id="mranklist">Standings</a></li>
+                        {% endif %}
+
+                        {% if user.is_authenticated and user.is_active%}  
+                            <li><a href = "{{SITE_URL}}logout/"  id="mlogout"> Logout </a></li>
+                            <li><a href = "{{SITE_URL}}update/"  id="mupdate">Update</a></li>
+                        {% else %}
+                            <li><a href = "{{SITE_URL}}login/"  id="mlogin"> Login </a></li>
+                        {% endif %}
+ 		 	<script type="text/javascript"> 
+				var url = document.URL;
+				if(url == "http://shaastra.iitm.ac.in/opc/home/") document.getElementById('mhome').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/faq/") document.getElementById('mfaq').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/contact/") document.getElementById('mcontact').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/problems/") document.getElementById('mproblems').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/register/") document.getElementById('mreg').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/submit/") document.getElementById('msubmit').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/queue/") document.getElementById('mqueue').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/ranklist/") document.getElementById('mranklist').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/teams/") document.getElementById('mteam').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/login/") document.getElementById('mlogin').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/update/") document.getElementById('mupdate').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/rules/") document.getElementById('mrules').style.backgroundColor = "#72A545";
+				if(url == "http://shaastra.iitm.ac.in/opc/logout/") document.getElementById('mlogout').style.backgroundColor = "#72A545";
+			 </script>
+                    </div>
+                </div>
+            </div>
+            
+            <center>
+            {% block content %}
+            
+            {% endblock %}
+            </center>
+        </div>
+    </body>
+</html>
