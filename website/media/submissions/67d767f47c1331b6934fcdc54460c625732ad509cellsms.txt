@@ -1,9 +1,0 @@
-Encryption of data traffic in cellular network is essential since it is vulnerable  to eavesdropping.
- This paper focuses on encrypting the data sent between the mobile stations and base stations using a stream cipher method.
- However, the keys for encryption are generated using a swarm intelligence approach. 
-Swarm intelligence is the emergent collective intelligence of groups of simple autonomous agents.
- The novel technique termed Ant Colony Key Generation Algorithm (AKGA) employs a character code table for encoding the keys. 
-The advantage of this approach is that it reduces the number of keys to be stored and distributed.
- Experimental results encrypting text of different lengths and the comparison of its performance with other stream cipher methods are presented.
-
--- 
